@@ -1,4 +1,4 @@
-package timepicker;
+package Timepicker;
 use strict;
 use warnings FATAL => 'all';
 

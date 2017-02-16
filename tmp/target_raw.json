@@ -1,0 +1,46 @@
+{
+  "alias": "node01-cpu",
+  "dsType": "influxdb",
+  "groupBy": [
+    {
+      "params": [
+        "$interval"
+      ],
+      "type": "time"
+    },
+    {
+      "params": [
+        "null"
+      ],
+      "type": "fill"
+    }
+  ],
+  "measurement": "cpu/usage_rate",
+  "policy": "default",
+  "refId": "A",
+  "resultFormat": "time_series",
+  "select": [
+    [
+      {
+        "params": [
+          "value"
+        ],
+        "type": "field"
+      },
+      {
+        "params": [],
+        "type": "mean"
+      }
+    ]
+  ],
+  "tags": [
+    {
+      "key": "hostname",
+      "operator": "=",
+      "value": "hqchk8swannode01"
+    }
+  ],
+  "hide": false,
+  "query": "SELECT mean(\"value\") FROM \"cpu/usage_rate\" WHERE \"hostname\" = 'hqchk8swannode01' AND $timeFilter GROUP BY time($interval) fill(null)",
+  "rawQuery": true
+}
