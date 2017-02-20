@@ -6,7 +6,7 @@ use JSON;
 
 sub new {
     my ($class, $args) = @_;
-    # Grafana documentation : http://docs.grafana.org/reference/dashboard/#rows
+    # Grafana documentation : no doc for the time-being
     my $self = bless {
             colors          => $args->{colors} || [
                 'rgba(50, 172, 45, 0.97)',
@@ -90,9 +90,9 @@ sub new {
             ],
             span            => $args->{span} || 12,
             targets         => $args->{targets},
-            thresholds      => $args{thresholds} || '0, 10',
-            timeFrom        => $args{timeFrom} || JSON::null,
-            title           => $args{title},
+            thresholds      => $args->{thresholds} || '0, 10',
+            timeFrom        => $args->{timeFrom} || JSON::null,
+            title           => $args->{title},
             type            => $args->{type} || 'jdbranham- diagram- panel',
             valueMaps       => $args->{valueMaps} || [
                 {

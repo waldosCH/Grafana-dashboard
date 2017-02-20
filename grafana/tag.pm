@@ -6,6 +6,7 @@ use JSON;
 
 sub new {
     my ($class, $args) = @_;
+    # Grafana documentation : no doc for the time-being
     my $self = bless {
         key      => $args->{key},
         operator => $args->{operator},

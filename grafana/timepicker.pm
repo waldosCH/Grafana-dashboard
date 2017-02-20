@@ -25,7 +25,7 @@ sub new {
                 '2h',
                 '1d'
             ],
-            status => $args->{status} ||  "Stable",
+            status => $args->{status} ||  'Stable',
             time_options => $args->{time_options} ||  [
                 '5m',
                 '15m',
@@ -40,7 +40,7 @@ sub new {
                 '7d',
                 '30d'
             ],
-            type => $args->{type} ||  "timepicker"
+            type => $args->{type} ||  'timepicker'
 
         }, $class;
 }
